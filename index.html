@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Staatliches&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+     <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Weather Dashboard</title>
+</head>
+<body class="flex-column min-100-vh container-fluid">
+        <h1 class="app-title  bg-blue p-3 text-center">Weather Dashboard</h1>
+    </header>
+    <main class="flex-row d-flex justify-space-between">
+        <div class="col-12 col-md-4">
+            <div class="card flex-column">
+                <h3 class="card-header">Search for a City</h3>
+                <form id="search-form" class="card-body">
+                    <label for="city-name" class="form-label"></label>
+                    <input type="text" name="city-name" id="cityname" autofocus="true" placeholder="New York"class="form-input"/>
+                    <button type="submit" class="btn btn-primary my-2"> Get Weather</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-12 col-md-8 ">
+            <div class="current-container card">  
+                <h1>forecast</h1>
+            </div>
+            <h2>5-Day Forecast</h2>
+            <div class="forecast-container flex-row d-flex justify-content-between">
+             <div class="card col-md-2"></div>
+             <div class="card col-md-2"></div>
+             <div class="card col-md-2">day1</div>
+             <div class="card col-md-2">day1</div>
+             <div class="card col-md-2">day1</div>
+            </div>
+        </div>
+    </main>
+<script src="./assets/js/script.js"></script>
+</body>
+</html>
