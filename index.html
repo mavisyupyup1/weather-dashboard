@@ -18,16 +18,15 @@
                 <h3 class="card-header">Search for a City</h3>
                 <form id="search-form" class="card-body">
                     <label for="city-name" class="form-label"></label>
-                    <input type="text" name="city-name" id="cityname" autofocus="true" placeholder="New York"class="form-input"/>
-                    <button type="submit" class="btn btn-primary my-2"> Get Weather</button>
+                    <input type="text" name="city-name" id="cityname" autofocus="true" placeholder="New York" class="form-input form-control"/>
+                    <button type="submit" class="btn btn-primary my-2 btn-block" id="get-weather-btn"> Get Weather</button>
                 </form>
             </div>
         </div>
         <div class="col-12 col-md-8 ">
             <div class="current-container card">  
-                <h1>forecast</h1>
             </div>
-            <h2>5-Day Forecast</h2>
+            <h2 id="five-day-title"></h2>
             <div class="forecast-container flex-row d-flex justify-content-between">
              <div class="card col-md-2"></div>
              <div class="card col-md-2"></div>
