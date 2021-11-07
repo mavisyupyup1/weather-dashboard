@@ -88,9 +88,9 @@ var iconUrl = `<img src="https://openweathermap.org/img/w/${cityForecast.icon}.p
 
 //var forecastCardEl = document.querySelector(".card-"+[i])
 var forecastDateDisplay = document.createElement("card")
-forecastDateDisplay.className = "card bg-primary"
+forecastDateDisplay.className = "card bg-blue text-light p-2 my-0"
 forecastDateDisplay.innerHTML= cityForecast.date + iconUrl
-+ cityForecast.temp+cityForecast.wind+cityForecast.humidity;
++ "<p><font size=2>Temp: "+cityForecast.temp+ " °F<br><font><p>"+ "<p>Wind: "+cityForecast.wind+" MPH<p>"+ "<p>Humidity: "+cityForecast.humidity+" %<p>";
 displayForecastEl.appendChild(forecastDateDisplay);
 
 }
