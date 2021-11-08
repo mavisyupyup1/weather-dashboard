@@ -1,6 +1,6 @@
 # weather-dashboard
 ## Description
-This weather dashboard runs in the browser and features dynamically updated HTML and CSS powered by JavaScript. User can search for a city and view the current weather conditions such as temperature, humidity, wind speed and UV index and five day forecast. 
+This weather dashboard runs in the browser and features dynamically updated HTML and CSS powered by JavaScript. User can search for a city and view the current weather conditions such as temperature, humidity, wind speed and UV index and five day forecast. The UV index color indicates whether the conditions are favorable, moderate, or severe.
 ## Built With
 * HTML
 * CSS
@@ -11,6 +11,7 @@ This weather dashboard runs in the browser and features dynamically updated HTML
 * Jquery
 
 ## Demo
+![demo](assets/images/Weather-Dashboard.gif)
 
 ## Website
  https://mavisyupyup1.github.io/weather-dashboard/
