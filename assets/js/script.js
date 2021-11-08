@@ -14,7 +14,7 @@ var formSubmitHandler = function(event){
         if(!searchHistoryList.includes(cityName)){
             searchHistoryList.push(cityName);
        var historyCityBtn = document.createElement("list-group-item")
-       historyCityBtn.className ="btn btn-light list-group-item";
+       historyCityBtn.className ="btn btn-light list-group-item m-2";
        historyCityBtn.textContent = cityName;
        displayHistoryEl.append(historyCityBtn);
         }
@@ -72,9 +72,7 @@ displayCurrentWeatherEl.appendChild(cityDisplayNameEl);
 var temperature = weather.main.temp;
 var wind =  weather.wind.speed;
 var humidity = weather.main.humidity;
-console.log(humidity);
-var uvIndex= oneCallWeather.current.uvi;
-console.log(uvIndex);
+var uvIndex= Number(oneCallWeather.current.uvi);
 var temperatureEl = document.createElement("p");
 temperatureEl.textContent = "Temp: "+ temperature + " °F";
 displayCurrentWeatherEl.appendChild(temperatureEl);
@@ -88,10 +86,16 @@ humidityEl.textContent = "Humidity: "+ humidity + " %";
 displayCurrentWeatherEl.appendChild(humidityEl);
 
 var uvIndexEl = document.createElement("p");
-uvIndexEl.textContent = "UV Index: "+uvIndex;
+if(uvIndex>=0 && uvIndex<3){
+uvIndexEl.innerHTML = "UV Index: "+ "<span style='background-color:green'>"+uvIndex+"</span>";
+} if (uvIndex>=3 && uvIndex <6){
+    uvIndexEl.innerHTML = "UV Index: "+ "<span style='background-color:orange'>"+uvIndex+"</span>";
+}if(uvIndex >=6){
+    uvIndexEl.innerHTML = "UV Index: "+ "<span style='background-color:red'>"+uvIndex+"</span>";
+}
 displayCurrentWeatherEl.appendChild(uvIndexEl);
 
-for (var i=2;i<7;i++){
+for (var i=1;i<6;i++){
 
 
     var cityForecast = {
@@ -105,8 +109,8 @@ var iconUrl = `<img src="https://openweathermap.org/img/w/${cityForecast.icon}.p
 
 //var forecastCardEl = document.querySelector(".card-"+[i])
 var forecastDateDisplay = document.createElement("card")
-forecastDateDisplay.className = "card bg-blue text-light p-2 my-0 col-2 "
-forecastDateDisplay.innerHTML= "<h5>"+cityForecast.date+"</h5>" + "<img>"+iconUrl+"</img>"
+forecastDateDisplay.className = "card bg-dark bg-gradient text-light p-2 my-0 col-2 "
+forecastDateDisplay.innerHTML= "<h5>"+cityForecast.date+"</h5>" + "<p>"+iconUrl+"</p>"
 + "<p>Temp: "+cityForecast.temp+ " °F<br><font><p>"+ "<p>Wind: "+cityForecast.wind+" MPH<p>"+ "<p>Humidity: "+cityForecast.humidity+" %<p>";
 displayForecastEl.appendChild(forecastDateDisplay);
 
