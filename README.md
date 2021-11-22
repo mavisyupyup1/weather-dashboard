@@ -11,7 +11,7 @@ This weather dashboard runs in the browser and features dynamically updated HTML
 * Jquery
 
 ## Demo
-![demo](assets/images/Weather-Dashboard.gif)
+![demo](./assets/images/Weather-Dashboard2.gif)
 
 ## Website
  https://mavisyupyup1.github.io/weather-dashboard/
