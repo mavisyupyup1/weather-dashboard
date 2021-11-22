@@ -138,6 +138,13 @@ $(document).ready(function() {
         var lastSearchedIndex = searchHistoryArr.length - 1;
         var lastSearchedCity = searchHistoryArr[lastSearchedIndex];
        getWeatherByCity(lastSearchedCity);
-        console.log(`Last searched city: ${lastSearchedCity}`);
+       for (var i = 0; i < searchHistoryArr.length; i++) {
+     var historyCityName = searchHistoryArr[i];
+     console.log(historyCityName)
+     var historyCityBtn = document.createElement("list-group-item")
+     historyCityBtn.className ="btn btn-light list-group-item m-2";
+    historyCityBtn.textContent = historyCityName;
+    displayHistoryEl.append(historyCityBtn);
     }
+}
 });
